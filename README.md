@@ -63,3 +63,5 @@ import Store from "store";
 ```
 
 ## React Suspense
+
+* When getting data through API, the component do not redering until finished get data.
