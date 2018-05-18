@@ -3,17 +3,26 @@ import AppPresenter from "./AppPresenter";
 import Store from "store";
 
 class AppContainer extends Component {
-  state = {
-    message: "Hello",
-  };
+  constructor(props) {
+    super(props);
 
-  componentDidMount = () => {
-    setTimeout(() => {
-      this.setState({
-        message: "Bye",
-      });
-    }, 2000);
-  };
+    this._changeMessage = () => {
+      if (this.state.message === "Hello") {
+        this.setState({
+          message: "Bye",
+        });
+      } else {
+        this.setState({
+          message: "Hello",
+        });
+      }
+    };
+
+    this.state = {
+      message: "Hello",
+      changeMessage: this._changeMessage,
+    };
+  }
 
   render() {
     return (
