@@ -7,5 +7,5 @@
 ## Setup
 
 ```bash
-]$ yarn add typography styled-components styled-reset styled-flex-component
+]$ yarn add typography styled-components styled-reset styled-flex-component react-fontawesome
 ```
