@@ -6,21 +6,24 @@ class AppContainer extends Component {
   constructor(props) {
     super(props);
 
-    this._changeMessage = () => {
-      if (this.state.message === "Hello") {
-        this.setState({
-          message: "Bye",
-        });
-      } else {
-        this.setState({
-          message: "Hello",
-        });
-      }
-    };
-
     this.state = {
-      message: "Hello",
-      changeMessage: this._changeMessage,
+      notifications: {
+        "1": {
+          id: 1,
+          text: "Somthing",
+          seen: false,
+        },
+        "2": {
+          id: 2,
+          text: "Somthing else",
+          seen: false,
+        },
+        "3": {
+          id: 3,
+          text: "Somthing else but Different",
+          seen: false,
+        },
+      },
     };
   }
 
